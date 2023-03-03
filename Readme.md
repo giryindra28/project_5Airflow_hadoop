@@ -1,4 +1,4 @@
-#Goal
+##Goal
 Membuat pipeline data analytics sederhana yang di scheduler dengan menggunakan airflow
 
 ##Steps
