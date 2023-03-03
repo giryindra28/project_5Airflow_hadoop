@@ -1,0 +1,279 @@
+[2023-03-03 11:16:40,235] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: avg_product_price.spark_submit manual__2023-03-03T11:16:38.399708+00:00 [queued]>
+[2023-03-03 11:16:40,271] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: avg_product_price.spark_submit manual__2023-03-03T11:16:38.399708+00:00 [queued]>
+[2023-03-03 11:16:40,272] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-03 11:16:40,272] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2023-03-03 11:16:40,273] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-03 11:16:40,317] {taskinstance.py:1377} INFO - Executing <Task(SparkSubmitOperator): spark_submit> on 2023-03-03 11:16:38.399708+00:00
+[2023-03-03 11:16:40,323] {standard_task_runner.py:52} INFO - Started process 719 to run task
+[2023-03-03 11:16:40,329] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'avg_product_price', 'spark_submit', 'manual__2023-03-03T11:16:38.399708+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/avg_product_price.py', '--cfg-path', '/tmp/tmpdzxq79p5', '--error-file', '/tmp/tmpajrhigt_']
+[2023-03-03 11:16:40,333] {standard_task_runner.py:80} INFO - Job 8: Subtask spark_submit
+[2023-03-03 11:16:40,450] {task_command.py:370} INFO - Running <TaskInstance: avg_product_price.spark_submit manual__2023-03-03T11:16:38.399708+00:00 [running]> on host 7f5e973bdd66
+[2023-03-03 11:16:40,694] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=ayyoub
+AIRFLOW_CTX_DAG_ID=avg_product_price
+AIRFLOW_CTX_TASK_ID=spark_submit
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-03T11:16:38.399708+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-03T11:16:38.399708+00:00
+[2023-03-03 11:16:40,726] {base.py:68} INFO - Using connection ID 'spark-hadoop' for task execution.
+[2023-03-03 11:16:40,729] {spark_submit.py:344} INFO - Spark-Submit cmd: spark-submit --master local[*] --name arrow-spark /hadoop-data/map_reduce/spark/average_price.py
+[2023-03-03 11:16:49,480] {spark_submit.py:495} INFO - 23/03/03 11:16:49 INFO SparkContext: Running Spark version 3.3.2
+[2023-03-03 11:16:49,741] {spark_submit.py:495} INFO - 23/03/03 11:16:49 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2023-03-03 11:16:50,033] {spark_submit.py:495} INFO - 23/03/03 11:16:50 INFO ResourceUtils: ==============================================================
+[2023-03-03 11:16:50,034] {spark_submit.py:495} INFO - 23/03/03 11:16:50 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2023-03-03 11:16:50,035] {spark_submit.py:495} INFO - 23/03/03 11:16:50 INFO ResourceUtils: ==============================================================
+[2023-03-03 11:16:50,036] {spark_submit.py:495} INFO - 23/03/03 11:16:50 INFO SparkContext: Submitted application: average_product_price
+[2023-03-03 11:16:50,103] {spark_submit.py:495} INFO - 23/03/03 11:16:50 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2023-03-03 11:16:50,141] {spark_submit.py:495} INFO - 23/03/03 11:16:50 INFO ResourceProfile: Limiting resource is cpu
+[2023-03-03 11:16:50,144] {spark_submit.py:495} INFO - 23/03/03 11:16:50 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2023-03-03 11:16:50,311] {spark_submit.py:495} INFO - 23/03/03 11:16:50 INFO SecurityManager: Changing view acls to: ***
+[2023-03-03 11:16:50,313] {spark_submit.py:495} INFO - 23/03/03 11:16:50 INFO SecurityManager: Changing modify acls to: ***
+[2023-03-03 11:16:50,314] {spark_submit.py:495} INFO - 23/03/03 11:16:50 INFO SecurityManager: Changing view acls groups to:
+[2023-03-03 11:16:50,316] {spark_submit.py:495} INFO - 23/03/03 11:16:50 INFO SecurityManager: Changing modify acls groups to:
+[2023-03-03 11:16:50,318] {spark_submit.py:495} INFO - 23/03/03 11:16:50 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(***); groups with view permissions: Set(); users  with modify permissions: Set(***); groups with modify permissions: Set()
+[2023-03-03 11:16:51,112] {spark_submit.py:495} INFO - 23/03/03 11:16:51 INFO Utils: Successfully started service 'sparkDriver' on port 33193.
+[2023-03-03 11:16:51,202] {spark_submit.py:495} INFO - 23/03/03 11:16:51 INFO SparkEnv: Registering MapOutputTracker
+[2023-03-03 11:16:51,318] {spark_submit.py:495} INFO - 23/03/03 11:16:51 INFO SparkEnv: Registering BlockManagerMaster
+[2023-03-03 11:16:51,373] {spark_submit.py:495} INFO - 23/03/03 11:16:51 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2023-03-03 11:16:51,375] {spark_submit.py:495} INFO - 23/03/03 11:16:51 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2023-03-03 11:16:51,391] {spark_submit.py:495} INFO - 23/03/03 11:16:51 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2023-03-03 11:16:51,470] {spark_submit.py:495} INFO - 23/03/03 11:16:51 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-4b999a87-c228-4798-8eca-be894fa113fc
+[2023-03-03 11:16:51,525] {spark_submit.py:495} INFO - 23/03/03 11:16:51 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2023-03-03 11:16:51,580] {spark_submit.py:495} INFO - 23/03/03 11:16:51 INFO SparkEnv: Registering OutputCommitCoordinator
+[2023-03-03 11:16:52,261] {spark_submit.py:495} INFO - 23/03/03 11:16:52 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2023-03-03 11:16:52,524] {spark_submit.py:495} INFO - 23/03/03 11:16:52 INFO Executor: Starting executor ID driver on host 7f5e973bdd66
+[2023-03-03 11:16:52,546] {spark_submit.py:495} INFO - 23/03/03 11:16:52 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[2023-03-03 11:16:52,604] {spark_submit.py:495} INFO - 23/03/03 11:16:52 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 39585.
+[2023-03-03 11:16:52,605] {spark_submit.py:495} INFO - 23/03/03 11:16:52 INFO NettyBlockTransferService: Server created on 7f5e973bdd66:39585
+[2023-03-03 11:16:52,608] {spark_submit.py:495} INFO - 23/03/03 11:16:52 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2023-03-03 11:16:52,626] {spark_submit.py:495} INFO - 23/03/03 11:16:52 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 7f5e973bdd66, 39585, None)
+[2023-03-03 11:16:52,637] {spark_submit.py:495} INFO - 23/03/03 11:16:52 INFO BlockManagerMasterEndpoint: Registering block manager 7f5e973bdd66:39585 with 434.4 MiB RAM, BlockManagerId(driver, 7f5e973bdd66, 39585, None)
+[2023-03-03 11:16:52,647] {spark_submit.py:495} INFO - 23/03/03 11:16:52 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 7f5e973bdd66, 39585, None)
+[2023-03-03 11:16:52,649] {spark_submit.py:495} INFO - 23/03/03 11:16:52 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 7f5e973bdd66, 39585, None)
+[2023-03-03 11:16:53,449] {spark_submit.py:495} INFO - /opt/spark-3.3.2-bin-hadoop3/python/lib/pyspark.zip/pyspark/sql/context.py:114: FutureWarning: Deprecated in 3.0.0. Use SparkSession.builder.getOrCreate() instead.
+[2023-03-03 11:16:54,019] {spark_submit.py:495} INFO - 23/03/03 11:16:54 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+[2023-03-03 11:16:54,041] {spark_submit.py:495} INFO - 23/03/03 11:16:54 INFO SharedState: Warehouse path is 'file:/home/***/spark-warehouse'.
+[2023-03-03 11:16:59,169] {spark_submit.py:495} INFO - 23/03/03 11:16:59 INFO InMemoryFileIndex: It took 468 ms to list leaf files for 1 paths.
+[2023-03-03 11:16:59,496] {spark_submit.py:495} INFO - 23/03/03 11:16:59 INFO InMemoryFileIndex: It took 28 ms to list leaf files for 1 paths.
+[2023-03-03 11:17:50,509] {base_job.py:229} ERROR - LocalTaskJob heartbeat got an exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3141, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 301, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 755, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 419, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 259, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 247, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 362, in __init__
+    self.__connect(first_connect_check=True)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 599, in __connect
+    connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 583, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "postgres" to address: Temporary failure in name resolution
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/airflow/jobs/base_job.py", line 225, in heartbeat
+    self.heartbeat_callback(session=session)
+  File "/usr/local/lib/python3.7/site-packages/airflow/utils/session.py", line 68, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/airflow/jobs/local_task_job.py", line 186, in heartbeat_callback
+    self.task_instance.refresh_from_db()
+  File "/usr/local/lib/python3.7/site-packages/airflow/utils/session.py", line 71, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 873, in refresh_from_db
+    ti = qry.first()
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2734, in first
+    return self.limit(1)._iter().first()
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2821, in _iter
+    execution_options={"_sa_orm_load_options": self.load_options},
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1669, in execute
+    conn = self._connection_for_bind(bind, close_with_result=True)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1520, in _connection_for_bind
+    engine, execution_options
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 747, in _connection_for_bind
+    conn = bind.connect()
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3095, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 91, in __init__
+    else engine.raw_connection()
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3174, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3145, in _wrap_pool_connect
+    e, dialect, self
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2004, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3141, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 301, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 755, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 419, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 259, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 247, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 362, in __init__
+    self.__connect(first_connect_check=True)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 599, in __connect
+    connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 583, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not translate host name "postgres" to address: Temporary failure in name resolution
+
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+[2023-03-03 11:22:50,457] {spark_submit.py:495} INFO - 23/03/03 11:22:37 WARN HeartbeatReceiver: Removing executor driver with no recent heartbeats: 125100 ms exceeds timeout 120000 ms
+[2023-03-03 11:22:51,955] {base_job.py:229} ERROR - LocalTaskJob heartbeat got an exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3141, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 301, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 755, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 419, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 259, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 247, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 362, in __init__
+    self.__connect(first_connect_check=True)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 599, in __connect
+    connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 583, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "postgres" to address: Temporary failure in name resolution
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/airflow/jobs/base_job.py", line 201, in heartbeat
+    session.merge(self)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2877, in merge
+    _resolve_conflict_map=_resolve_conflict_map,
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2950, in _merge
+    merged = self.get(mapper.class_, key[1], identity_token=key[2])
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2702, in get
+    identity_token=identity_token,
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2800, in _get_impl
+    load_options=load_options,
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/loading.py", line 535, in load_on_pk_identity
+    bind_arguments=bind_arguments,
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1669, in execute
+    conn = self._connection_for_bind(bind, close_with_result=True)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1520, in _connection_for_bind
+    engine, execution_options
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 747, in _connection_for_bind
+    conn = bind.connect()
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3095, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 91, in __init__
+    else engine.raw_connection()
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3174, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3145, in _wrap_pool_connect
+    e, dialect, self
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2004, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3141, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 301, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 755, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 419, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 259, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 247, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 362, in __init__
+    self.__connect(first_connect_check=True)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 599, in __connect
+    connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 583, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not translate host name "postgres" to address: Temporary failure in name resolution
+
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+[2023-03-03 11:23:42,997] {local_task_job.py:144} ERROR - Heartbeat time limit exceeded!
+[2023-03-03 11:24:46,520] {process_utils.py:129} INFO - Sending Signals.SIGTERM to group 719. PIDs of all processes in the group: [720, 773, 719]
+[2023-03-03 11:24:55,393] {process_utils.py:80} INFO - Sending the signal Signals.SIGTERM to group 719
+[2023-03-03 11:25:08,177] {taskinstance.py:1541} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-03-03 11:25:08,565] {process_utils.py:75} INFO - Process psutil.Process(pid=773, status='terminated', started='11:16:47') (773) terminated with exit code None
+[2023-03-03 11:25:08,490] {spark_submit.py:620} INFO - Sending kill signal to spark-submit
+[2023-03-03 11:25:09,344] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 157, in execute
+    self._hook.submit(self._application)
+  File "/usr/local/lib/python3.7/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 414, in submit
+    self._process_spark_submit_log(iter(self._submit_sp.stdout))  # type: ignore
+  File "/usr/local/lib/python3.7/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 463, in _process_spark_submit_log
+    for line in itr:
+  File "/usr/local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1543, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2023-03-03 11:25:09,432] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=avg_product_price, task_id=spark_submit, execution_date=20230303T111638, start_date=20230303T111640, end_date=20230303T112509
+[2023-03-03 11:25:09,529] {standard_task_runner.py:97} ERROR - Failed to execute job 8 for task spark_submit (Task received SIGTERM signal; 719)
+[2023-03-03 11:25:09,883] {process_utils.py:75} INFO - Process psutil.Process(pid=719, status='terminated', exitcode=1, started='11:16:40') (719) terminated with exit code 1
+[2023-03-03 11:26:08,174] {process_utils.py:143} WARNING - process psutil.Process(pid=720, name='java', status='zombie', started='11:16:40') did not respond to SIGTERM. Trying SIGKILL
+[2023-03-03 11:26:08,181] {process_utils.py:80} INFO - Sending the signal Signals.SIGKILL to group 719
+[2023-03-03 11:27:08,185] {process_utils.py:154} ERROR - Process psutil.Process(pid=720, name='java', status='zombie', started='11:16:40') (720) could not be killed. Giving up.
