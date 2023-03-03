@@ -1,4 +1,7 @@
-# Steps
+#Goal
+Membuat pipeline data analytics sederhana yang di scheduler dengan menggunakan airflow
+
+##Steps
 1. `docker network create hadoop_network`
 2. `docker build -t hadoop-base:3.3.1 -f Dockerfile-hadoop .`
 3. `docker-compose -f docker-compose-hadoop.yml up -d`
